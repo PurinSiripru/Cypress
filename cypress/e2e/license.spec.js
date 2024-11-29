@@ -23,8 +23,6 @@ describe("License Test",()=>{
         cy.get('div[class="v-list-item v-list-item--link v-theme--PurpleTheme v-list-item--density-default v-list-item--one-line rounded-0 v-list-item--variant-text"').wait(1000).click()
         cy.get('i[class="mdi-menu-down mdi v-icon notranslate v-theme--PurpleTheme v-icon--size-default v-select__menu-icon"]').eq(1).wait(1000).click()
         cy.get('button[class="v-btn v-btn--elevated v-theme--PurpleTheme bg-primary v-btn--density-default v-btn--size-default v-btn--variant-elevated"]').wait(1000).click()
-    })
-    it('change search condition',()=>{
         cy.get('#__nuxt > div > div > div > div > main > div > div > div.v-card-item > div > div.v-row.my-4 > div.v-col-md-4.v-col-lg-4.v-col-12.d-flex.flex-wrap.gap-2.align-center > i').wait(1000).click()
         cy.get('i[class="mdi-menu-down mdi v-icon notranslate v-theme--PurpleTheme v-icon--size-default v-select__menu-icon"]').eq(2).wait(1000).click()
         cy.contains('เริ่มต้นด้วย').wait(1000).click()
@@ -39,25 +37,22 @@ describe("License Test",()=>{
         cy.get('button[class="v-btn v-btn--elevated v-theme--PurpleTheme bg-primary v-btn--density-default v-btn--size-default v-btn--variant-elevated"]').wait(1000).click()
         cy.get('#__nuxt > div > div > div > div > main > div > div > div.v-card-item > div > div.v-row.my-4 > div.v-col-md-4.v-col-lg-4.v-col-12.d-flex.flex-wrap.gap-2.align-center > i').wait(1000).click()
         cy.get('i[class="mdi-menu-down mdi v-icon notranslate v-theme--PurpleTheme v-icon--size-default v-select__menu-icon"]').eq(2).wait(1000).click()
-        cy.contains('ไม่มี').wait(1000).click()
+        cy.contains('ไม่มี').click()
         cy.get('button[class="v-btn v-btn--elevated v-theme--PurpleTheme bg-primary v-btn--density-default v-btn--size-default v-btn--variant-elevated"]').wait(1000).click()
         cy.get('#__nuxt > div > div > div > div > main > div > div > div.v-card-item > div > div.v-row.my-4 > div.v-col-md-4.v-col-lg-4.v-col-12.d-flex.flex-wrap.gap-2.align-center > i').wait(1000).click()
         cy.get('i[class="mdi-menu-down mdi v-icon notranslate v-theme--PurpleTheme v-icon--size-default v-select__menu-icon"]').eq(2).wait(1000).click()
-        cy.contains('ไม่เท่ากับ').wait(1000).click()
+        cy.contains('ไม่เท่ากับ').click()
         cy.get('button[class="v-btn v-btn--elevated v-theme--PurpleTheme bg-primary v-btn--density-default v-btn--size-default v-btn--variant-elevated"]').wait(1000).click()
-    })
-    it('clear search',()=>{
         cy.get('#__nuxt > div > div > div > div > main > div > div > div.v-card-item > div > div.v-row.my-4 > div.v-col-md-4.v-col-lg-4.v-col-12.d-flex.flex-wrap.gap-2.align-center > i').wait(1000).click()
         cy.get('button[class="v-btn v-btn--elevated v-theme--PurpleTheme bg-muted v-btn--density-default v-btn--size-default v-btn--variant-elevated"]').wait(1000).click()
         cy.wait(2000)
     })
     it('insert new license',()=>{
         cy.get('#__nuxt > div > div > div > div > main > div > div > div.v-card-item > div > div.v-row.my-4 > div.v-col-md-8.v-col-lg-8.v-col-12.d-flex.flex-wrap.gap-2.align-center > a').click()
-        cy.contains('View').click()
-        cy.contains('Add').click()
-        cy.contains('Update').click()
-        cy.contains('Approve').click()
-        cy.contains('Delete').click()
+        cy.get('input[aria-label="View"]').eq(0).wait(1000).click().click()
+        cy.get('input[aria-label="Update"]').eq(1).wait(1000).click()
+        cy.get('input[aria-label="Approve"]').eq(2).wait(1000).click()
+        cy.get('input[aria-label="Delete"]').eq(3).wait(1000).click()
         cy.get('#__nuxt > div > div > div > div > main > div > div > form > form > div.v-card-text.d-flex.justify-center.gap-2 > button').wait(1000).click()
         cy.get('body > div.swal2-container.swal2-center.swal2-backdrop-show > div')
         cy.get('body > div.swal2-container.swal2-center.swal2-backdrop-show > div > div.swal2-actions > button.swal2-confirm.swal2-styled').wait(1000).click()
@@ -70,35 +65,45 @@ describe("License Test",()=>{
         cy.get('input[class="v-field__input"]').click().type('test001',{delay: 100})
         cy.get('#__nuxt > div > div > div > div > main > div > div > div.v-card-item > div > div.v-row.my-4 > div.v-col-md-4.v-col-lg-4.v-col-12.d-flex.flex-wrap.gap-2.align-center > i').wait(1000).click()
         cy.get('i[class="mdi-menu-down mdi v-icon notranslate v-theme--PurpleTheme v-icon--size-default v-select__menu-icon"]').eq(1).wait(1000).click()
-        cy.get('div[class="v-list-item v-list-item--link v-theme--PurpleTheme v-list-item--density-default v-list-item--one-line rounded-0 v-list-item--variant-text"').wait(1000).click()
+        cy.get('div[class="v-list-item v-list-item--link v-theme--PurpleTheme v-list-item--density-default v-list-item--one-line rounded-0 v-list-item--variant-text"').click()
         cy.get('i[class="mdi-menu-down mdi v-icon notranslate v-theme--PurpleTheme v-icon--size-default v-select__menu-icon"]').eq(1).wait(1000).click()
         cy.get('button[class="v-btn v-btn--elevated v-theme--PurpleTheme bg-primary v-btn--density-default v-btn--size-default v-btn--variant-elevated"]').wait(1000).click()
         cy.get('#__nuxt > div > div > div > div > main > div > div > div.v-card-item > div > div.v-row.my-4 > div.v-col-md-4.v-col-lg-4.v-col-12.d-flex.flex-wrap.gap-2.align-center > i').wait(1000).click()
         cy.get('i[class="mdi-menu-down mdi v-icon notranslate v-theme--PurpleTheme v-icon--size-default v-select__menu-icon"]').eq(2).wait(1000).click()
-        cy.contains('เริ่มต้นด้วย').wait(1000).click()
+        cy.contains('เริ่มต้นด้วย').click()
         cy.get('button[class="v-btn v-btn--elevated v-theme--PurpleTheme bg-primary v-btn--density-default v-btn--size-default v-btn--variant-elevated"]').wait(1000).click()
         cy.get('#__nuxt > div > div > div > div > main > div > div > div.v-card-item > div > div.v-row.my-4 > div.v-col-md-4.v-col-lg-4.v-col-12.d-flex.flex-wrap.gap-2.align-center > i').wait(1000).click()
         cy.get('i[class="mdi-menu-down mdi v-icon notranslate v-theme--PurpleTheme v-icon--size-default v-select__menu-icon"]').eq(2).wait(1000).click()
-        cy.contains('ลงท้ายด้วย').wait(1000).click()
+        cy.contains('ลงท้ายด้วย').click()
         cy.get('button[class="v-btn v-btn--elevated v-theme--PurpleTheme bg-primary v-btn--density-default v-btn--size-default v-btn--variant-elevated"]').wait(1000).click()
         cy.get('#__nuxt > div > div > div > div > main > div > div > div.v-card-item > div > div.v-row.my-4 > div.v-col-md-4.v-col-lg-4.v-col-12.d-flex.flex-wrap.gap-2.align-center > i').wait(1000).click()
         cy.get('i[class="mdi-menu-down mdi v-icon notranslate v-theme--PurpleTheme v-icon--size-default v-select__menu-icon"]').eq(2).wait(1000).click()
-        cy.contains('เท่ากับ').wait(1000).click()
+        cy.contains('เท่ากับ').click()
         cy.get('button[class="v-btn v-btn--elevated v-theme--PurpleTheme bg-primary v-btn--density-default v-btn--size-default v-btn--variant-elevated"]').wait(1000).click()
         cy.get('#__nuxt > div > div > div > div > main > div > div > div.v-card-item > div > div.v-row.my-4 > div.v-col-md-4.v-col-lg-4.v-col-12.d-flex.flex-wrap.gap-2.align-center > i').wait(1000).click()
         cy.get('i[class="mdi-menu-down mdi v-icon notranslate v-theme--PurpleTheme v-icon--size-default v-select__menu-icon"]').eq(2).wait(1000).click()
-        cy.contains('ไม่มี').wait(1000).click()
+        cy.contains('ไม่มี').click()
         cy.get('button[class="v-btn v-btn--elevated v-theme--PurpleTheme bg-primary v-btn--density-default v-btn--size-default v-btn--variant-elevated"]').wait(1000).click()
         cy.get('#__nuxt > div > div > div > div > main > div > div > div.v-card-item > div > div.v-row.my-4 > div.v-col-md-4.v-col-lg-4.v-col-12.d-flex.flex-wrap.gap-2.align-center > i').wait(1000).click()
         cy.get('i[class="mdi-menu-down mdi v-icon notranslate v-theme--PurpleTheme v-icon--size-default v-select__menu-icon"]').eq(2).wait(1000).click()
-        cy.contains('ไม่เท่ากับ').wait(1000).click()
+        cy.contains('ไม่เท่ากับ').click()
         cy.get('button[class="v-btn v-btn--elevated v-theme--PurpleTheme bg-primary v-btn--density-default v-btn--size-default v-btn--variant-elevated"]').wait(1000).click()
         cy.get('#__nuxt > div > div > div > div > main > div > div > div.v-card-item > div > div.v-row.my-4 > div.v-col-md-4.v-col-lg-4.v-col-12.d-flex.flex-wrap.gap-2.align-center > i').wait(1000).click()
         cy.get('button[class="v-btn v-btn--elevated v-theme--PurpleTheme bg-muted v-btn--density-default v-btn--size-default v-btn--variant-elevated"]').wait(1000).click()
     })
-    it('check details',()=>{
+    it('check details test001',()=>{
+        cy.visit('https://vending-main-client-dev.rvvcs.com/license')
+        cy.get('div[class="v-navigation-drawer__scrim"]').click()
         cy.get('i[class="mdi-dots-vertical mdi v-icon notranslate v-theme--PurpleTheme v-icon--size-default"]').eq(7).wait(1000).click()
         cy.get('a[class="v-list-item v-list-item--link v-theme--PurpleTheme v-list-item--density-compact v-list-item--one-line rounded-0 v-list-item--variant-text cursor-pointer"]').eq(0).wait(1000).click()
+        cy.scrollTo(0, 500);
+        cy.wait(1000); // รอ 500ms
+        cy.scrollTo(0, 1000);
+        cy.wait(1000); 
+        cy.scrollTo(0, 1500);
+        cy.wait(1000);
+        cy.scrollTo(1500, 0);
+        cy.wait(1000); // รอ 500ms
         cy.get('a[class="v-breadcrumbs-item--link"]').wait(1000).click()
         cy.wait(1000)
     })
@@ -106,11 +111,14 @@ describe("License Test",()=>{
         cy.get('i[class="mdi-dots-vertical mdi v-icon notranslate v-theme--PurpleTheme v-icon--size-default"]').eq(7).wait(1000).click()
         cy.get('a[class="v-list-item v-list-item--link v-theme--PurpleTheme v-list-item--density-compact v-list-item--one-line rounded-0 v-list-item--variant-text cursor-pointer"]').eq(1).wait(1000).click()
         cy.get('input[value="test001"]').clear()
+        cy.get('thead input[type="checkbox"]').each(($checkbox)=>{
+            cy.wrap($checkbox).wait(200).check();
+        })
         cy.get('button[class="v-btn v-btn--elevated v-theme--PurpleTheme bg-save v-btn--density-default v-btn--size-default v-btn--variant-elevated"]').wait(1000).click()
         cy.get('button[class="swal2-confirm swal2-styled"]').wait(1000).click()
         cy.get('input[class="v-field__input"]').click().wait(1000).type('test002',{delay: 100})
         cy.get('button[class="v-btn v-btn--elevated v-theme--PurpleTheme bg-save v-btn--density-default v-btn--size-default v-btn--variant-elevated"]').wait(1000).click()
-        cy.get('button[class="swal2-confirm swal2-styled"]').wait(1000).click()
+        cy.get('button[class="swal2-confirm swal2-styled"]').click()
     })
     it('search not found test001',()=>{
         cy.get('input[class="v-field__input"]').click().wait(1000).type('test001')
@@ -146,7 +154,7 @@ describe("License Test",()=>{
         cy.get('input[class="v-field__input"]').click().wait(1000).type('test002')
         cy.get('#__nuxt > div > div > div > div > main > div > div > div.v-card-item > div > div.v-row.my-4 > div.v-col-md-4.v-col-lg-4.v-col-12.d-flex.flex-wrap.gap-2.align-center > i').wait(1000).click()
         cy.get('i[class="mdi-menu-down mdi v-icon notranslate v-theme--PurpleTheme v-icon--size-default v-select__menu-icon"]').eq(1).wait(1000).click()
-        cy.get('div[class="v-list-item v-list-item--link v-theme--PurpleTheme v-list-item--density-default v-list-item--one-line rounded-0 v-list-item--variant-text"').wait(1000).wait(1000).click()
+        cy.get('div[class="v-list-item v-list-item--link v-theme--PurpleTheme v-list-item--density-default v-list-item--one-line rounded-0 v-list-item--variant-text"').click()
         cy.get('i[class="mdi-menu-down mdi v-icon notranslate v-theme--PurpleTheme v-icon--size-default v-select__menu-icon"]').eq(1).wait(1000).click()
         cy.get('button[class="v-btn v-btn--elevated v-theme--PurpleTheme bg-primary v-btn--density-default v-btn--size-default v-btn--variant-elevated"]').wait(1000).click()
         cy.get('#__nuxt > div > div > div > div > main > div > div > div.v-card-item > div > div.v-row.my-4 > div.v-col-md-4.v-col-lg-4.v-col-12.d-flex.flex-wrap.gap-2.align-center > i').wait(1000).click()
@@ -172,12 +180,29 @@ describe("License Test",()=>{
         cy.get('#__nuxt > div > div > div > div > main > div > div > div.v-card-item > div > div.v-row.my-4 > div.v-col-md-4.v-col-lg-4.v-col-12.d-flex.flex-wrap.gap-2.align-center > i').wait(1000).click()
         cy.get('button[class="v-btn v-btn--elevated v-theme--PurpleTheme bg-muted v-btn--density-default v-btn--size-default v-btn--variant-elevated"]').wait(1000).click()
     })
+    it('check details test002',()=>{
+        cy.get('i[class="mdi-dots-vertical mdi v-icon notranslate v-theme--PurpleTheme v-icon--size-default"]').eq(7).wait(1000).click()
+        cy.get('a[class="v-list-item v-list-item--link v-theme--PurpleTheme v-list-item--density-compact v-list-item--one-line rounded-0 v-list-item--variant-text cursor-pointer"]').eq(0).wait(1000).click()
+        cy.scrollTo(0, 500);
+        cy.wait(1000); // รอ 500ms
+        cy.scrollTo(0, 1000);
+        cy.wait(1000); 
+        cy.scrollTo(0, 1500);
+        cy.wait(1000);
+        cy.scrollTo(1500, 0);
+        cy.wait(1000); // รอ 500ms
+        cy.get('a[class="v-breadcrumbs-item--link"]').wait(1000).click()
+        cy.wait(1000)
+    })
     it('delete test002',()=>{
         cy.get('i[class="mdi-dots-vertical mdi v-icon notranslate v-theme--PurpleTheme v-icon--size-default"]').eq(7).wait(1000).click()
         cy.get('div[class="v-list-item v-list-item--link v-theme--PurpleTheme v-list-item--density-compact v-list-item--one-line rounded-0 v-list-item--variant-text cursor-pointer"]').wait(1000).click()
-        cy.get('button[class="swal2-confirm swal2-styled"]').wait(1000).click()
+        cy.get('button[class="swal2-confirm swal2-styled"]').click()
+        cy.wait(1000)
         cy.get('div[class="swal2-popup swal2-modal swal2-icon-success swal2-show"]')
-        cy.get('button[class="swal2-confirm swal2-styled"]').wait(1000).click()
+        cy.wait(1000)
+        cy.get('button[class="swal2-confirm swal2-styled"]').click()
+        cy.wait(1000)
     })
     it('search not found test002',()=>{
         cy.get('input[class="v-field__input"]').click().wait(1000).type('test002')
