@@ -40,7 +40,7 @@ describe('Vending Test',()=>{
         cy.get('i[class="mdi-filter mdi v-icon notranslate v-theme--PurpleTheme v-icon--size-default text-primary v-icon--clickable"]').wait(1000).click()
         cy.get('i[class="mdi-menu-down mdi v-icon notranslate v-theme--PurpleTheme v-icon--size-default v-select__menu-icon"').eq(2).wait(1000).click()
         cy.wait(1500)
-        cy.get('div[class="v-list-item v-list-item--link v-theme--PurpleTheme v-list-item--density-default v-list-item--one-line rounded-0 v-list-item--variant-text"]').eq(1).should('be.visible').wait(1000).click()
+        cy.get('div[class="v-list-item v-list-item--link v-theme--PurpleTheme v-list-item--density-default v-list-item--one-line rounded-0 v-list-item--variant-text"]').eq(1).should('be.visible').click()
         cy.get('button[class="v-btn v-btn--elevated v-theme--PurpleTheme bg-primary v-btn--density-default v-btn--size-default v-btn--variant-elevated"]').wait(1000).click()
         cy.get('i[class="mdi-filter mdi v-icon notranslate v-theme--PurpleTheme v-icon--size-default text-primary v-icon--clickable"]').wait(1000).click()
         cy.get('i[class="mdi-menu-down mdi v-icon notranslate v-theme--PurpleTheme v-icon--size-default v-select__menu-icon"').eq(2).wait(1000).click()
@@ -196,7 +196,7 @@ describe('Vending Test',()=>{
         cy.get('a[class="v-breadcrumbs-item--link"]').wait(1000).click()
         cy.wait(1000)
     })
-    it('update 111 to AAA',()=>{
+    it('update 111 to AAA and test validation of IP',()=>{
         cy.get('i[class="mdi-dots-vertical mdi v-icon notranslate v-theme--PurpleTheme v-icon--size-default"]').eq(3).wait(1000).click()
         cy.get('a[class="v-list-item v-list-item--link v-theme--PurpleTheme v-list-item--density-compact v-list-item--one-line rounded-0 v-list-item--variant-text cursor-pointer"]').eq(0).wait(1000).click()
         cy.wait(1000)
@@ -236,9 +236,6 @@ describe('Vending Test',()=>{
         cy.get('button[class="v-btn v-btn--elevated v-theme--PurpleTheme bg-save v-btn--density-default v-btn--size-default v-btn--variant-elevated"]').should('be.visible').click()
         cy.get('button[class="swal2-confirm swal2-styled"]').should('be.visible').wait(1000).click()
         cy.get('input[class="v-field__input"]').eq(7).should('be.visible').wait(1000).clear()
-        cy.get('button[class="v-btn v-btn--elevated v-theme--PurpleTheme bg-save v-btn--density-default v-btn--size-default v-btn--variant-elevated"]').wait(1000).click()
-        cy.get('button[class="swal2-confirm swal2-styled"]').should('be.visible').wait(1000).click()
-        cy.get('input[class="v-field__input"]').eq(7).should('be.visible').click().wait(1000).type('2468',{delay: 100})
         cy.get('button[class="v-btn v-btn--elevated v-theme--PurpleTheme bg-save v-btn--density-default v-btn--size-default v-btn--variant-elevated"]').should('be.visible').click()
         cy.get('button[class="swal2-confirm swal2-styled"]').should('be.visible').wait(1000).click()
         cy.get('i[class="mdi-menu-down mdi v-icon notranslate v-theme--PurpleTheme v-icon--size-default v-select__menu-icon"]').eq(1).should('be.visible').wait(1000).click()
