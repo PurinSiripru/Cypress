@@ -24,11 +24,9 @@ describe('User Test',()=>{
         cy.get('#__nuxt > div > div > div > div > main > div > div > form > form > div.v-card-text.d-flex.justify-center.gap-2 > button').wait(1000).click()
         cy.get('body > div.swal2-container.swal2-center.swal2-backdrop-show > div > div.swal2-actions > button.swal2-confirm.swal2-styled').wait(1000).click()
     })
-    it('click at user',()=>{
+    it('search test001',()=>{
         cy.get('button[class="v-btn v-btn--icon v-theme--PurpleTheme v-btn--density-default v-btn--size-small v-btn--variant-flat ms-md-3 ms-sm-5 ms-3 text-muted"]').should('be.visible').wait(1000).click()
         cy.get('a[class="v-list-item v-list-item--link v-theme--PurpleTheme v-list-item--density-default v-list-item--one-line v-list-item--rounded v-list-item--variant-text mb-1 leftPadding"]').eq(3).should('be.visible').wait(1000).click()
-    })
-    it('search test001',()=>{
         cy.wait(2000)
         cy.get('input[class="v-field__input"]').wait(1000).click().type('test001')
         cy.scrollTo('top')
@@ -78,7 +76,7 @@ describe('User Test',()=>{
         cy.get('button[class="v-btn v-btn--elevated v-theme--PurpleTheme bg-muted v-btn--density-default v-btn--size-default v-btn--variant-elevated"]').should('be.visible').wait(1000).click()
         cy.scrollTo('top')
     })
-    it('insert new user',()=>{
+    it('insert new user , test validation not select company',()=>{
         cy.get('a[class="v-btn v-btn--elevated v-theme--PurpleTheme bg-primary v-btn--density-default elevation-3 v-btn--size-default v-btn--variant-elevated"]').should('be.visible').wait(1000).click()
         cy.scrollTo('bottom')
         cy.get('button[class="v-btn v-btn--elevated v-theme--PurpleTheme bg-save v-btn--density-default v-btn--size-default v-btn--variant-elevated"]').should('be.visible').wait(1000).click()
@@ -109,10 +107,6 @@ describe('User Test',()=>{
         cy.get('button[class="swal2-confirm swal2-styled"]').should('be.visible').wait(1000).click()
         cy.get('i[class="mdi-menu-down mdi v-icon notranslate v-theme--PurpleTheme v-icon--size-default v-select__menu-icon"]').eq(1).should('be.visible').wait(1000).click()
         cy.contains('dev01').should('be.visible').wait(1000).click()
-        cy.get('button[class="v-btn v-btn--elevated v-theme--PurpleTheme bg-save v-btn--density-default v-btn--size-default v-btn--variant-elevated"]').should('be.visible').wait(1000).click()
-        cy.get('button[class="swal2-confirm swal2-styled"]').should('be.visible').wait(1000).click()
-        cy.get('i[class="mdi-menu-down mdi v-icon notranslate v-theme--PurpleTheme v-icon--size-default v-select__menu-icon"]').eq(2).should('be.visible').wait(1000).click()
-        cy.contains('revelsoft').should('be.visible').wait(1000).click()
         cy.get('button[class="v-btn v-btn--elevated v-theme--PurpleTheme bg-save v-btn--density-default v-btn--size-default v-btn--variant-elevated"]').should('be.visible').wait(1000).click()
         cy.get('button[class="swal2-confirm swal2-styled"]').should('be.visible').wait(1000).click()
         cy.get('i[class="mdi-menu-down mdi v-icon notranslate v-theme--PurpleTheme v-icon--size-default v-select__menu-icon"]').eq(3).should('be.visible').wait(1000).click()
@@ -187,7 +181,7 @@ describe('User Test',()=>{
         cy.get('a[class="v-list-item v-list-item--link v-theme--PurpleTheme v-list-item--density-compact v-list-item--one-line rounded-0 v-list-item--variant-text cursor-pointer"]').eq(1).should('be.visible').wait(1000).click()
         cy.get('input[class="v-field__input"]').eq(4).should('be.visible')
     })
-    it('change test001 data',()=>{
+    it('change test001 data , select company',()=>{
         cy.get('input[class="v-field__input"]').eq(1).should('be.visible').clear()
         cy.get('button[class="v-btn v-btn--elevated v-theme--PurpleTheme bg-save v-btn--density-default v-btn--size-default v-btn--variant-elevated"]').should('be.visible').wait(1000).click()
         cy.get('button[class="swal2-confirm swal2-styled"]').should('be.visible').wait(1000).click()
