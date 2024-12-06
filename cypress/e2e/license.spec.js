@@ -10,7 +10,7 @@ describe("License Test",()=>{
         cy.get("#__nuxt > div > div > div > div > div").wait(1000).click()
         cy.get("#__nuxt > div > div > div > div > header > div > div > div:nth-child(1) > button").wait(1000).click()
     })
-    it("should click at license",()=>{
+    it("should click at license",()=>{ 
         cy.get("#__nuxt > div > div > div > div > nav")
         cy.get("#__nuxt > div > div > div > div > nav > div > div:nth-child(2) > div > div.v-list.v-theme--PurpleTheme.bg-transparent.v-list--density-default.v-list--one-line.pa-6 > a:nth-child(7)").wait(1000).click()
     })
