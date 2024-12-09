@@ -10,11 +10,9 @@ describe('Vending Test',()=>{
         cy.get("#__nuxt > div > div > div > div > div").wait(1000).click()
         cy.get("#__nuxt > div > div > div > div > header > div > div > div:nth-child(1) > button").wait(1000).click()
     })
-    it('click at vending',()=>{
-        cy.get('a[class="v-list-item v-list-item--link v-theme--PurpleTheme v-list-item--density-default v-list-item--one-line v-list-item--rounded v-list-item--variant-text mb-1 leftPadding"]').eq(0).wait(1000).click()
-    })
     it("search test001",()=>{
         cy.wait(2000)
+        cy.get('a[class="v-list-item v-list-item--link v-theme--PurpleTheme v-list-item--density-default v-list-item--one-line v-list-item--rounded v-list-item--variant-text mb-1 leftPadding"]').eq(0).wait(1000).click()
         cy.get('input[class="v-field__input"]').click().wait(1000)
         cy.scrollTo('top')
         cy.get('input[class="v-field__input"]').type('test001',{delay: 100})
